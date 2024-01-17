@@ -7,4 +7,8 @@ class HomeModel extends CI_Model {
         // $q = $this->db->query('select * from users where uid = "2"');
         return $this->db->where('uid', 1)->get('users')->result();
     }
+
+    public function add_data($postData){
+        $this -> db -> insert('users', $postData);
+    }
 }
